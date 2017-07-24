@@ -1,0 +1,203 @@
+<html>
+<head>
+<title>CAR</title>
+<style>
+body 
+	{
+		overflow: hidden;
+		height: 100vh;
+		background-size: 2400% 2400%;
+    }
+@keyframes road-moving 
+	{
+        100% 
+		{
+            transform: translate(-2400px);
+        }
+    }
+@keyframes driving 
+	{
+        0% 
+		{
+		    left: -50%;
+            bottom 17%;
+        }
+        10% 
+		{
+            bottom: 17%;
+        }
+        20% 
+		{
+            bottom: 17%;
+		}
+        100% 
+		{
+            left: 110%;
+            bottom: 17%;
+            
+        }
+    }
+@keyframes wheelsRotation 
+	{
+        100% 
+		{
+            transform: rotate(360deg);
+        }
+    } 
+.road
+       {
+	    width: 250%;
+        height: 200px;
+        background-color: #585858;
+        border-top: 10px solid #756D6D;
+        border-bottom: 20px solid #756D6D;
+        position: absolute;
+        bottom: 20%;
+		margin: auto;
+        margin-left: -10px;
+		margin-right: 10px;
+       }
+.road-line 
+	{
+        height: 15px;
+        width: 250%;
+        position: absolute;
+        left: -10%;
+        top: 30px;
+        border-top: 40px dashed white;
+        margin-top: 25px;
+        animation: road-moving 10s infinite linear;
+        transition: all 3s linear;
+    }  
+.car-container 
+	{
+        position: absolute;
+        bottom: 10%;
+        width: 430px;
+        height: 300px;
+        animation: driving 10s infinite linear;
+        transform: scale(0.5);
+    }
+.door 
+	{
+        width: 110px;
+        height: 100px;
+        border: 3px solid #DEE5DD;
+        position: absolute;
+        left: 36%;
+        top: 16px;
+        border-radius: 10% 40% 10% 10%;
+    }
+.car-top  
+	{
+        border-radius: 25% 40% 0 0;
+        background-color: #000000;
+        max-width: 100%;
+        width: 250px;
+        height: 130px;
+        position: absolute;
+        top: 0;
+        left: 4%;
+    }
+.window 
+	{
+        background-color: #E2F0F6;
+        border-radius: 5px;
+        position: absolute;
+        width: 40%;
+        height: 60%;
+        margin: 17px;
+        border: 9px solid #808080;
+    }
+.car-bottom 
+	{
+        border-radius: 100px 200px 0 0;
+        background-color: #000000;
+        max-width: 100%;
+        width: 430px;
+        height: 140px;
+        position: absolute;
+        bottom: 20%;
+    }
+.wheel 
+	{
+        width: 100px;
+        height: 100px;
+        background-color: #DEE5DD;
+        border-radius: 50%;
+        border: 20px solid black;
+        position: absolute;
+        bottom: 10%;
+        animation: wheelsRotation 1s infinite linear;
+    }
+.wheel-top 
+	{
+        bottom: 48px;
+        position: absolute;
+        width: 115px;
+        height: 80px;
+        border-radius: 50%;
+        z-index: 5;
+        transform: rotateX(180deg);
+    }
+.wheel-dotv
+	{
+        width: 10px;
+        height: 25px;
+		border-radius: 100% 50%;
+        background-color: black;
+        position: absolute;
+    }
+.wheel-doth
+	{
+        width: 25px;
+        height: 10px;
+		border-radius: 100% 50%;
+        background-color: black;
+        position: absolute;
+    }
+.wheel-dot
+	{
+        width: 10px;
+        height: 10px;
+		border-radius: 50%;
+        background-color: black;
+        position: absolute;
+    }
+</style>
+</head>
+<body>
+<div class="road">
+ <div class="road-line"></div>
+</div>
+<div class="car-container">
+ <div class="car-top">
+   <div class="window" style="left: 0; border-top-left-radius: 30%;" ></div>
+   <div class="window" style="right: 0; border-top-right-radius: 50%;" ></div>
+ </div>
+ <div class="car-bottom">
+   <div class="door"></div>
+   <div style="width: 30px; height: 14px; background-color: #DEE5DD; border-radius: 30%; position: absolute; left: 38%; top: 19%;border: 1px solid lightcoral;"></div>
+ </div>
+ 
+<div class="wheel-top" style="left: 7%;"></div>
+<div class="wheel" style="left: 3%; top: 60%">
+ <div class="wheel-dotv" style="top: 10%; left: 45%;"></div>
+ <div class="wheel-dotv" style="bottom: 10%; left: 45%"></div>
+ <div class="wheel-doth" style="top: 45%; right: 10%;"></div>
+ <div class="wheel-doth" style="top: 45%; left: 10%;"></div>
+ <div class="wheel-dot" style="top: 45%; right:45%"></div>
+</div>
+
+<div class="wheel-top" style="right: 7%;"></div>
+<div class="wheel" style="right: 3%; top: 60%">
+ <div class="wheel-dotv" style="top: 10%; left: 45%;"></div>
+ <div class="wheel-dotv" style="bottom: 10%; left: 45%"></div>
+ <div class="wheel-doth" style="top: 45%; right: 10%;"></div>
+ <div class="wheel-doth" style="top: 45%; left: 10%;"></div>
+  <div class="wheel-dot" style="top: 45%; right:45%"></div>
+</div>
+ 
+ </div> 
+</body>
+</html>
